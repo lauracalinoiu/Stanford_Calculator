@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  @IBOutlet weak var display: UILabel!
-  var userIsInMiddleOfEditing = false
+  @IBOutlet private weak var display: UILabel!
+  private var userIsInMiddleOfEditing = false
   
-  @IBAction func numberPressed(sender: UIButton) {
+  @IBAction private func numberPressed(sender: UIButton) {
     let item = sender.currentTitle
     if userIsInMiddleOfEditing{
       display.text = display.text! + item!
@@ -23,13 +23,28 @@ class ViewController: UIViewController {
     userIsInMiddleOfEditing = true
   }
   
-  @IBAction func operationPerformed(sender: UIButton) {
-    userIsInMiddleOfEditing = false
-    if let currentTitle = sender.currentTitle{
-      if currentTitle == "π" {
-        display.text = "\(M_PI)"
-      }
+  private var displayValue: Double{
+    get{
+      return Double(display.text!)!
     }
+    set{
+      display.text = String(newValue)
+    }
+  }
+  
+  private var calculatorBrain = CalculatorBrain()
+  
+  @IBAction private func operationPerformed(sender: UIButton) {
+    if userIsInMiddleOfEditing{
+      calculatorBrain.setOperand(displayValue)
+      userIsInMiddleOfEditing = false
+    }
+    
+    if let mathematicalSymbol = sender.currentTitle{
+      calculatorBrain.performOperation(mathematicalSymbol)
+    }
+
+    displayValue = calculatorBrain.result
   }
 }
 
