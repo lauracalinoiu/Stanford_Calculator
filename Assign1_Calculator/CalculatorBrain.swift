@@ -14,6 +14,7 @@ class CalculatorBrain{
   
   func setOperand(operand: Double){
     accumulator = operand
+    description = description + "\(operand)"
   }
   
   private enum Operation{
@@ -26,9 +27,13 @@ class CalculatorBrain{
   private var operations: Dictionary<String, Operation> = [
     "π" : Operation.Constant(M_PI),
     "e" : Operation.Constant(M_E),
+    "Rand": Operation.Constant(Double(arc4random())),
     "√" : Operation.UnaryOperation(sqrt),
     "cos": Operation.UnaryOperation(cos),
-    "x": Operation.BinaryOperation(*),
+    "sin": Operation.UnaryOperation(sin),
+    "tan": Operation.UnaryOperation(tan),
+    "1/x": Operation.UnaryOperation({1/$0}),
+    "×": Operation.BinaryOperation(*),
     "÷": Operation.BinaryOperation(/),
     "+": Operation.BinaryOperation(+),
     "-": Operation.BinaryOperation(-),
@@ -37,14 +42,22 @@ class CalculatorBrain{
   
   func performOperation(symbol: String){
     if let operation = operations[symbol]{
+      
       switch operation{
+        
       case .Constant(let value) :
         accumulator = value
+        description = description + symbol
+        
       case .UnaryOperation(let function) :
         accumulator = function(accumulator)
+        description = description + symbol
+        
       case .BinaryOperation(let operation):
         executePendingOperation()
         pending = PendingBinaryOperationInfo(binaryFunction: operation, firstOperand: accumulator)
+        description = description + symbol
+      
       case .Equals:
         executePendingOperation()
       }
@@ -68,5 +81,28 @@ class CalculatorBrain{
     get{
       return accumulator
     }
+  }
+  
+  var description: String = ""
+  
+  var postfix: String{
+    get{
+      if isPartialResult{
+        return "..."
+      } else {
+        return "="
+      }
+    }
+  }
+  var isPartialResult: Bool{
+    get{
+      return pending != nil
+    }
+  }
+  
+  func clear(){
+    pending = nil
+    setOperand(0.0)
+    description = ""
   }
 }

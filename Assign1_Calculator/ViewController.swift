@@ -11,24 +11,31 @@ import UIKit
 class ViewController: UIViewController {
   
   @IBOutlet private weak var display: UILabel!
+  @IBOutlet weak var debugDisplay: UILabel!
   private var userIsInMiddleOfEditing = false
   
   @IBAction private func numberPressed(sender: UIButton) {
     let item = sender.currentTitle
+    
     if userIsInMiddleOfEditing{
+      let savedOldDisplay = display.text!
       display.text = display.text! + item!
+      
+      if displayValue == nil{
+        display.text = savedOldDisplay
+      }
     } else{
       display.text = item
     }
     userIsInMiddleOfEditing = true
   }
   
-  private var displayValue: Double{
+  private var displayValue: Double?{
     get{
-      return Double(display.text!)!
+      return Double(display.text!)
     }
     set{
-      display.text = String(newValue)
+      display.text = String(newValue!)
     }
   }
   
@@ -36,7 +43,7 @@ class ViewController: UIViewController {
   
   @IBAction private func operationPerformed(sender: UIButton) {
     if userIsInMiddleOfEditing{
-      calculatorBrain.setOperand(displayValue)
+      calculatorBrain.setOperand(displayValue!)
       userIsInMiddleOfEditing = false
     }
     
@@ -45,6 +52,13 @@ class ViewController: UIViewController {
     }
 
     displayValue = calculatorBrain.result
+    debugDisplay.text = calculatorBrain.description + calculatorBrain.postfix
+  }
+
+  @IBAction func clearDisplaysAndStates(sender: UIButton) {
+    display.text = "0"
+    debugDisplay.text = " "
+    calculatorBrain.clear()
   }
 }
 
