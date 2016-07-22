@@ -11,11 +11,20 @@ import Foundation
 class CalculatorBrain{
   
   private var accumulator = 0.0
+  private var internalProgram: [PropertyList] = []
+  let M = "M"
   
   func setOperand(operand: Double){
     accumulator = operand
-    description = description + "\(operand)"
+    internalProgram.append(operand)
   }
+  
+  func setOperand(variableName: String){
+    variableValues[variableName] = 0.0
+    accumulator = 0.0
+    internalProgram.append(variableName)
+  }
+  var variableValues = Dictionary<String, Double>()
   
   private enum Operation{
     case Constant(Double)
@@ -41,23 +50,22 @@ class CalculatorBrain{
   ]
   
   func performOperation(symbol: String){
+    internalProgram.append(symbol)
+    
     if let operation = operations[symbol]{
       
       switch operation{
         
       case .Constant(let value) :
         accumulator = value
-        description = description + symbol
         
       case .UnaryOperation(let function) :
         accumulator = function(accumulator)
-        description = description + symbol
         
       case .BinaryOperation(let operation):
         executePendingOperation()
         pending = PendingBinaryOperationInfo(binaryFunction: operation, firstOperand: accumulator)
-        description = description + symbol
-      
+        
       case .Equals:
         executePendingOperation()
       }
@@ -83,26 +91,60 @@ class CalculatorBrain{
     }
   }
   
-  var description: String = ""
-  
   var postfix: String{
     get{
       if isPartialResult{
         return "..."
-      } else {
-        return "="
       }
+      return ""
     }
   }
-  var isPartialResult: Bool{
+  private var isPartialResult: Bool{
     get{
       return pending != nil
     }
   }
   
+  typealias PropertyList = AnyObject
+  var program: [PropertyList]{
+    get{
+      return internalProgram
+    }
+    set{
+      clear()
+      for op in newValue{
+        if let operand = op as? Double{
+          setOperand(operand)
+        } else if let operation = op as? String{
+          if operation == M{
+            setOperand(variableValues[M]!)
+          } else{
+            performOperation(operation)
+          }
+        }
+      }
+    }
+  }
+  
+  var description: String{
+    get{
+      var d = ""
+      for op in internalProgram{
+        if let operand = op as? Double{
+          d = d + "\(operand)"
+        } else if let operation = op as? String{
+          d = d + operation
+        }
+      }
+      
+      return d
+    }
+    
+  }
   func clear(){
     pending = nil
     setOperand(0.0)
-    description = ""
+    accumulator = 0.0
+    internalProgram.removeAll()
   }
 }

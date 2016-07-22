@@ -60,5 +60,19 @@ class ViewController: UIViewController {
     debugDisplay.text = " "
     calculatorBrain.clear()
   }
+  
+  @IBAction func arrowMPressed(sender: UIButton) {
+    if let val = displayValue{
+      let p = calculatorBrain.program
+      calculatorBrain.variableValues[calculatorBrain.M] = val
+      calculatorBrain.program = p
+      displayValue = calculatorBrain.result
+    }
+  }
+  
+  @IBAction func mPressed(sender: UIButton) {
+    calculatorBrain.setOperand("M")
+    displayValue = calculatorBrain.result
+  }
 }
 

@@ -18,37 +18,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-b3-jos">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-b3-jos">
                                 <rect key="frame" x="20" y="28" width="560" height="564"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kpN-Wi-zTr">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="76"/>
                                         <color key="backgroundColor" red="0.13725490196078433" green="0.19607843137254902" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                         <color key="textColor" red="0.81176470588235294" green="0.83137254901960778" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sEu-x7-VK5">
-                                        <rect key="frame" x="0.0" y="57" width="560" height="482"/>
+                                        <rect key="frame" x="0.0" y="86" width="560" height="431"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gGH-UE-b5Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="88"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-mL-ezp">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="64"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpu-tl-8es">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="88"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b20-El-GWB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="64"/>
+                                                        <color key="backgroundColor" red="0.13315641880000001" green="0.21311452980000001" blue="0.38580816979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" red="0.81176470590000005" green="0.83137254900000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clearDisplaysAndStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wa0-5W-po6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSD-sj-WWm">
+                                                        <rect key="frame" x="114" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="C">
+                                                            <color key="titleColor" red="0.81176470590000005" green="0.83137254900000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clearDisplaysAndStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Onz-9s-aA6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpu-tl-8es">
+                                                        <rect key="frame" x="228" y="0.0" width="104" height="64"/>
+                                                        <color key="backgroundColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <state key="normal" title="→M">
                                                             <color key="titleColor" red="0.81176470588235294" green="0.83137254901960778" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="clearDisplaysAndStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jG4-Pw-oTP"/>
+                                                            <action selector="arrowMPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0v7-cV-lKR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOH-Uu-tw9">
+                                                        <rect key="frame" x="342" y="0.0" width="104" height="64"/>
+                                                        <color key="backgroundColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <state key="normal" title="M">
+                                                            <color key="titleColor" red="0.81176470590000005" green="0.83137254900000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="mPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5V7-Ns-Tci"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5t7-RS-Y2J">
+                                                        <rect key="frame" x="456" y="0.0" width="104" height="64"/>
+                                                        <color key="backgroundColor" red="0.13315641880000001" green="0.21311452980000001" blue="0.38580816979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <state key="normal" title="←">
+                                                            <color key="titleColor" red="0.81176470590000005" green="0.83137254900000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clearDisplaysAndStates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBC-2o-rAR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gGH-UE-b5Y">
+                                                <rect key="frame" x="0.0" y="74" width="560" height="63"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-aA-7o7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="63"/>
+                                                        <color key="backgroundColor" red="0.55155694484710693" green="0.65045398473739624" blue="0.89492124319076538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationPerformed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwf-Nv-L72"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-eu-QKH">
-                                                        <rect key="frame" x="114" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="114" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.55155694484710693" green="0.65045398473739624" blue="0.89492124319076538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="÷">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -57,9 +117,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yze-8J-jAs">
-                                                        <rect key="frame" x="228" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="228" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.55155694484710693" green="0.65045398473739624" blue="0.89492124319076538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="×">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -68,9 +128,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw2-Mv-Rus">
-                                                        <rect key="frame" x="342" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="342" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.55155694484710693" green="0.65045398473739624" blue="0.89492124319076538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -79,9 +139,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTj-qE-hDe">
-                                                        <rect key="frame" x="456" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="456" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.55155694484710693" green="0.65045398473739624" blue="0.89492124319076538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -92,12 +152,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-e4-Xxd">
-                                                <rect key="frame" x="0.0" y="98" width="560" height="89"/>
+                                                <rect key="frame" x="0.0" y="147" width="560" height="64"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anG-ub-tha">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="Rand">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -106,9 +166,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIF-LP-eeN">
-                                                        <rect key="frame" x="114" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="114" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="π">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -117,9 +177,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hn-25-vaU">
-                                                        <rect key="frame" x="228" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="228" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -128,9 +188,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsA-yP-8dB">
-                                                        <rect key="frame" x="342" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="342" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -139,9 +199,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTR-1g-6rj">
-                                                        <rect key="frame" x="456" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="456" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -152,12 +212,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-IL-NPQ">
-                                                <rect key="frame" x="0.0" y="197" width="560" height="88"/>
+                                                <rect key="frame" x="0.0" y="221" width="560" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-fI-Ra4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="1/x">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -166,9 +226,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-gU-47V">
-                                                        <rect key="frame" x="114" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="114" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="√">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -177,9 +237,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-Xs-86u">
-                                                        <rect key="frame" x="228" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="228" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -188,9 +248,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-FI-4cr">
-                                                        <rect key="frame" x="342" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="342" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -199,9 +259,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGZ-e8-GIK">
-                                                        <rect key="frame" x="456" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="456" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -212,12 +272,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qfd-ve-Lod">
-                                                <rect key="frame" x="0.0" y="295" width="560" height="89"/>
+                                                <rect key="frame" x="0.0" y="294" width="560" height="64"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP4-kc-4mv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="tan">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -226,9 +286,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyi-cr-4m4">
-                                                        <rect key="frame" x="114" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="114" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="e">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -237,9 +297,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9X-fu-5ok">
-                                                        <rect key="frame" x="228" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="228" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -248,9 +308,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCK-92-k2a">
-                                                        <rect key="frame" x="342" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="342" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -259,9 +319,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQC-i0-kK1">
-                                                        <rect key="frame" x="456" y="0.0" width="104" height="89"/>
+                                                        <rect key="frame" x="456" y="0.0" width="104" height="64"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -272,12 +332,12 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KCP-YJ-GSl">
-                                                <rect key="frame" x="0.0" y="394" width="560" height="88"/>
+                                                <rect key="frame" x="0.0" y="368" width="560" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFM-88-XC3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="sin">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -286,9 +346,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZt-pw-4UB">
-                                                        <rect key="frame" x="114" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="114" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.63179463148117065" green="0.6496390700340271" blue="0.69313937425613403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="cos">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -297,9 +357,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuB-05-wkt">
-                                                        <rect key="frame" x="228" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="228" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -308,9 +368,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-23-2uf">
-                                                        <rect key="frame" x="342" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="342" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -319,9 +379,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgD-wo-c6Z">
-                                                        <rect key="frame" x="456" y="0.0" width="104" height="88"/>
+                                                        <rect key="frame" x="456" y="0.0" width="104" height="63"/>
                                                         <color key="backgroundColor" red="0.133156418800354" green="0.21311452984809875" blue="0.38580816984176636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="20"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" red="0.81220322847366333" green="0.83479219675064087" blue="0.89166051149368286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -334,10 +394,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Ac-Ui-1jX">
-                                        <rect key="frame" x="0.0" y="549" width="560" height="15"/>
+                                        <rect key="frame" x="0.0" y="527" width="560" height="37"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpu-oY-Xf0">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpu-oY-Xf0">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="37"/>
                                                 <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <color key="textColor" red="0.066666666666666666" green="0.086274509803921567" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
@@ -350,10 +410,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="W8F-b3-jos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="GEM-EM-PyZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W8F-b3-jos" secondAttribute="trailing" id="ZcL-lv-MKA"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W8F-b3-jos" secondAttribute="bottom" constant="8" symbolic="YES" id="qP6-mz-R6H"/>
-                            <constraint firstItem="W8F-b3-jos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s10-nw-dA2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W8F-b3-jos" secondAttribute="bottom" constant="8" symbolic="YES" id="IUo-AJ-Een"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W8F-b3-jos" secondAttribute="trailing" id="MbY-YU-eCE"/>
+                            <constraint firstItem="W8F-b3-jos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="OV0-E2-jXn"/>
+                            <constraint firstItem="W8F-b3-jos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pbn-a8-wod"/>
                         </constraints>
                     </view>
                     <connections>
